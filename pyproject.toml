@@ -11,3 +11,6 @@ build-backend = "flit_core.buildapi"
 
 [tool.flit.module]
 name = "scrap_management"
+
+[tool.bench.frappe-dependencies]
+frappe = ">=16.0.0-dev,<17.0.0-dev"
