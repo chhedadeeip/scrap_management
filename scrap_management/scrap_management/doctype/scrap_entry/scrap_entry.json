@@ -1,0 +1,38 @@
+{
+ "name": "Scrap Entry",
+ "doctype": "DocType",
+ "is_submittable": 1,
+ "module": "Scrap Management",
+ "autoname": "naming_series:",
+ "track_changes": 1,
+ "fields": [
+  {"fieldname":"naming_series","fieldtype":"Series","label":"Series","default":"SE-.YYYY.-"},
+  {"fieldname":"work_order","fieldtype":"Link","options":"Work Order","label":"Work Order","reqd":1},
+  {"fieldname":"column_break_1","fieldtype":"Column Break"},
+  {"fieldname":"posting_date","fieldtype":"Date","label":"Posting Date","default":"Today","reqd":1},
+  {"fieldname":"company","fieldtype":"Link","options":"Company","label":"Company","reqd":1},
+  {"fieldname":"section_break_1","fieldtype":"Section Break","label":"Production Details"},
+  {"fieldname":"bom","fieldtype":"Link","options":"BOM","label":"BOM","read_only":1},
+  {"fieldname":"production_item","fieldtype":"Link","options":"Item","label":"Production Item","read_only":1},
+  {"fieldname":"column_break_2","fieldtype":"Column Break"},
+  {"fieldname":"fg_completed_qty","fieldtype":"Float","label":"Finished Goods Qty","read_only":1},
+  {"fieldname":"section_break_2","fieldtype":"Section Break","label":"Scrap Materials"},
+  {"fieldname":"scrap_items","fieldtype":"Table","label":"Scrap Items","options":"Scrap Entry Item"},
+  {"fieldname":"section_break_3","fieldtype":"Section Break","label":"Summary"},
+  {"fieldname":"total_scrap_qty","fieldtype":"Float","label":"Total Scrap Qty","read_only":1},
+  {"fieldname":"column_break_3","fieldtype":"Column Break"},
+  {"fieldname":"total_scrap_value","fieldtype":"Currency","label":"Total Scrap Value (Book)","read_only":1},
+  {"fieldname":"column_break_4","fieldtype":"Column Break"},
+  {"fieldname":"total_dealer_value","fieldtype":"Currency","label":"Total Dealer Value","read_only":1},
+  {"fieldname":"section_break_4","fieldtype":"Section Break","label":"Default Settings"},
+  {"fieldname":"default_scrap_action","fieldtype":"Select","label":"Default Action","options":"\nWrite Off\nReturn to Stock\nSell to Dealer"},
+  {"fieldname":"default_target_warehouse","fieldtype":"Link","options":"Warehouse","label":"Default Target Warehouse"},
+  {"fieldname":"remarks","fieldtype":"Small Text","label":"Remarks"}
+ ],
+ "permissions": [
+  {"role":"Manufacturing User","read":1,"write":1,"create":1,"submit":1,"cancel":1},
+  {"role":"Stock User","read":1,"write":1,"create":1,"submit":1,"cancel":1},
+  {"role":"Accounts User","read":1},
+  {"role":"System Manager","read":1,"write":1,"create":1,"submit":1,"cancel":1,"delete":1}
+ ]
+}

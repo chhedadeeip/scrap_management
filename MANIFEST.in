@@ -1,0 +1,2 @@
+include setup.py
+recursive-include scrap_management *.json *.js *.css *.html *.py

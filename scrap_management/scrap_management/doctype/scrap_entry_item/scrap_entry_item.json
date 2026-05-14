@@ -1,0 +1,22 @@
+{
+ "name": "Scrap Entry Item",
+ "doctype": "DocType",
+ "istable": 1,
+ "module": "Scrap Management",
+ "fields": [
+  {"fieldname":"item_code","fieldtype":"Link","options":"Item","label":"Item Code","reqd":1,"in_list_view":1,"columns":2},
+  {"fieldname":"item_name","fieldtype":"Data","label":"Item Name","read_only":1,"in_list_view":1,"columns":2},
+  {"fieldname":"expected_qty","fieldtype":"Float","label":"Expected Qty","read_only":1,"in_list_view":1,"columns":1},
+  {"fieldname":"actual_qty","fieldtype":"Float","label":"Actual Used Qty","in_list_view":1,"columns":1},
+  {"fieldname":"scrap_qty","fieldtype":"Float","label":"Scrap Qty","read_only":1,"in_list_view":1,"columns":1},
+  {"fieldname":"uom","fieldtype":"Link","options":"UOM","label":"UOM","in_list_view":1,"columns":1},
+  {"fieldname":"valuation_rate","fieldtype":"Currency","label":"Valuation Rate","in_list_view":1,"columns":1},
+  {"fieldname":"scrap_value","fieldtype":"Currency","label":"Scrap Value","read_only":1,"in_list_view":1,"columns":1},
+  {"fieldname":"dealer_rate","fieldtype":"Currency","label":"Dealer Rate","in_list_view":1,"columns":1},
+  {"fieldname":"dealer_value","fieldtype":"Currency","label":"Dealer Value","read_only":1,"in_list_view":1,"columns":1},
+  {"fieldname":"scrap_action","fieldtype":"Select","label":"Action","options":"Write Off\nReturn to Stock\nSell to Dealer","in_list_view":1,"columns":1},
+  {"fieldname":"target_warehouse","fieldtype":"Link","options":"Warehouse","label":"Target Warehouse","in_list_view":1,"columns":2},
+  {"fieldname":"source_warehouse","fieldtype":"Link","options":"Warehouse","label":"Source Warehouse"},
+  {"fieldname":"scrap_reason","fieldtype":"Select","label":"Reason","options":"Process Loss\nDamage\nDefect\nExcess Material\nOther"}
+ ]
+}
